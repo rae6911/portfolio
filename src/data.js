@@ -51,7 +51,7 @@ export const experience = [
   {
     org: "Local Government of Victoria",
     note: "In-house systems team",
-    dates: "Sept 2025 – Dec 2026",
+    dates: "Sept 2025 – Nov 2026",
     points: [
       "Build and maintain the team’s in-house systems so they stay functional, up to date and reliable for daily use.",
       "Develop and maintain system frontends and integrations with React.js, HTML5/CSS3, Flutter and C# WPF, connected through REST APIs.",
