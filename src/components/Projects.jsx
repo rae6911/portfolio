@@ -3,7 +3,7 @@ import Reveal from "./Reveal";
 
 export default function Projects() {
   return (
-    <section id="projects" className="bg-surface py-20 md:py-28">
+    <section id="projects" className="bg-surface py-16 md:py-28">
       <div className="mx-auto max-w-6xl px-5">
         <Reveal as="h2" className="font-display text-4xl font-bold tracking-tight sm:text-5xl">
           Projects
@@ -13,21 +13,21 @@ export default function Projects() {
           and a growing company.
         </Reveal>
 
-        <ul className="mt-12">
+        <ul className="mt-10 md:mt-12">
           {projects.map((p) => (
             <Reveal
               as="li"
               key={p.name}
-              className="grid gap-5 border-t border-snow/15 py-8 md:grid-cols-12 md:gap-8"
+              className="grid gap-4 border-t border-snow/15 py-8 md:grid-cols-12 md:gap-x-8 md:gap-y-5"
             >
-              <div className="md:col-span-4">
+              <div className="md:col-span-4 md:row-span-2 lg:row-span-1">
                 <h3 className="font-display text-2xl font-bold">{p.name}</h3>
                 <p className="mt-1 font-medium text-lime">{p.kind}</p>
               </div>
-              <p className="leading-relaxed text-snow/80 md:col-span-5">
+              <p className="leading-relaxed text-snow/80 md:col-span-8 lg:col-span-5">
                 {p.description}
               </p>
-              <ul className="flex flex-wrap content-start gap-2 md:col-span-3">
+              <ul className="flex flex-wrap content-start gap-2 md:col-span-8 lg:col-span-3">
                 {p.stack.map((s) => (
                   <li
                     key={s}

@@ -17,7 +17,10 @@ html {
   scroll-padding-top: 6rem;
 }
 
+html { -webkit-text-size-adjust: 100%; text-size-adjust: 100%; }
+
 body {
+  overflow-x: clip;
   background: var(--color-night);
   color: var(--color-snow);
   font-family: var(--font-sans);
@@ -49,15 +52,20 @@ h1, h2, h3 { text-wrap: balance; }
 
 /* Card surface used by the hero facts and the contact section. */
 .card {
-  border-radius: 1.5rem;
+  border-radius: 1.25rem;
   border: 1px solid rgb(255 255 255 / 0.1);
   background: rgb(18 23 26 / 0.7);
-  padding: 1.75rem;
+  padding: 1.25rem;
+}
+@media (min-width: 640px) {
+  .card { border-radius: 1.5rem; padding: 1.75rem; }
 }
 .card-link { transition: border-color 0.2s, background-color 0.2s; }
-.card-link:hover {
-  border-color: rgb(168 243 25 / 0.45);
-  background: rgb(22 29 33 / 0.9);
+@media (hover: hover) {
+  .card-link:hover {
+    border-color: rgb(168 243 25 / 0.45);
+    background: rgb(22 29 33 / 0.9);
+  }
 }
 
 /* One page-load moment: the cursor turns into place inside the blob. */

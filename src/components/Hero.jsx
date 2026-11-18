@@ -41,28 +41,28 @@ export default function Hero() {
 
   return (
     <section id="top" ref={sectionRef} className="hero-bg">
-      <div className="mx-auto grid max-w-6xl items-center gap-14 px-5 pb-12 pt-36 md:grid-cols-12 md:pt-40">
+      <div className="mx-auto grid max-w-6xl items-center gap-14 px-5 pb-12 pt-32 sm:pt-36 md:grid-cols-12 md:gap-10 md:pt-40 lg:gap-14">
         <Parallax speed={0.05} className="md:col-span-7">
           <Reveal>
-            <p className="inline-flex items-center gap-2.5 rounded-full border border-snow/15 bg-surface/60 px-4 py-2 text-sm text-snow/85">
+            <p className="inline-flex items-center gap-2.5 rounded-2xl border border-snow/15 bg-surface/60 px-4 py-2 text-sm text-snow/85 sm:rounded-full">
               <span aria-hidden="true" className="h-2 w-2 rounded-full bg-lime" />
               Joshua Elijah Berdin, frontend developer in Tarlac
             </p>
           </Reveal>
 
-          <Reveal as="h1" delay={100} className="mt-8 font-display text-4xl font-extrabold leading-[1.08] tracking-tight sm:text-6xl lg:text-7xl">
+          <Reveal as="h1" delay={100} className="mt-8 font-display text-4xl font-extrabold leading-[1.08] tracking-tight sm:text-5xl lg:text-6xl xl:text-7xl">
             I build web, mobile and desktop apps, from interface to database.
           </Reveal>
-          <Reveal as="p" delay={200} className="mt-6 max-w-xl text-lg leading-relaxed text-mute">
+          <Reveal as="p" delay={200} className="mt-6 max-w-xl text-base leading-relaxed text-mute sm:text-lg">
             React, Flutter and C# for the interface, Node.js, Express and
             PostgreSQL behind it. Recent work includes Tech Flow, V-Access
             and the AdvnCity website.
           </Reveal>
 
-          <Reveal delay={300} className="mt-10 flex flex-wrap gap-3">
+          <Reveal delay={300} className="mt-10 flex flex-col gap-3 sm:flex-row sm:flex-wrap">
             <a
               href="#projects"
-              className="group flex items-center gap-3 rounded-full bg-lime py-2 pl-6 pr-2 font-semibold text-night transition duration-200 hover:-translate-y-0.5 hover:bg-snow"
+              className="group flex items-center justify-between gap-3 rounded-full bg-lime py-2 pl-6 pr-2 sm:justify-start font-semibold text-night transition duration-200 hover:-translate-y-0.5 hover:bg-snow"
             >
               See my projects
               <span className="grid h-10 w-10 place-items-center rounded-full bg-night text-snow">
@@ -74,7 +74,7 @@ export default function Hero() {
             <a
               href={profile.cv}
               download
-              className="rounded-full border border-snow/25 px-7 py-3.5 font-medium transition duration-200 hover:-translate-y-0.5 hover:border-lime hover:text-lime"
+              className="rounded-full border border-snow/25 px-7 py-3.5 text-center font-medium transition duration-200 hover:-translate-y-0.5 hover:border-lime hover:text-lime"
             >
               Download CV
             </a>
@@ -82,7 +82,7 @@ export default function Hero() {
         </Parallax>
 
         {/* Blob with floating tags: each layer moves at its own speed. */}
-        <Reveal delay={150} className="relative mx-auto aspect-square w-full max-w-md md:col-span-5">
+        <Reveal delay={150} className="relative mx-auto aspect-square w-full max-w-[19rem] sm:max-w-md md:col-span-5">
           <Parallax
             speed={0.12}
             className="absolute inset-6 grid place-items-center rounded-[58%_42%_55%_45%/45%_55%_45%_55%] bg-lime shadow-[0_0_120px_rgb(168_243_25/0.25)]"
@@ -107,7 +107,7 @@ export default function Hero() {
         </Reveal>
       </div>
 
-      <div className="mx-auto max-w-6xl px-5 pb-20">
+      <div className="mx-auto max-w-6xl px-5 pb-16 md:pb-20">
         <ul className="grid gap-4 sm:grid-cols-3">
           {facts.map(([title, sub], i) => (
             <Reveal as="li" key={title} delay={i * 100} className="card !p-5">

@@ -72,7 +72,7 @@ function CopyButton({ text, label }) {
       type="button"
       onClick={copy}
       aria-label={`Copy ${label}`}
-      className="shrink-0 rounded-full border border-snow/20 px-3 py-1 text-xs font-medium hover:border-lime hover:text-lime"
+      className="min-h-10 shrink-0 rounded-full border border-snow/20 px-4 text-xs font-medium transition-colors duration-200 hover:border-lime hover:text-lime"
     >
       <span aria-live="polite">{copied ? "Copied" : "Copy"}</span>
     </button>
@@ -94,14 +94,14 @@ export default function Contact() {
       <section id="contact" className="px-5 pb-20 pt-4 md:pb-28">
         <div className="mx-auto grid max-w-6xl gap-4 md:grid-cols-12">
           {/* Call to action */}
-          <Reveal className="on-lime flex flex-col rounded-[2rem] bg-lime p-8 text-night sm:p-10 md:col-span-5">
-            <h2 className="font-display text-4xl font-extrabold leading-[1.02] tracking-tighter sm:text-5xl">
+          <Reveal className="on-lime flex flex-col rounded-[2rem] bg-lime p-7 text-night sm:p-10 md:col-span-12 lg:col-span-5">
+            <h2 className="font-display text-4xl font-extrabold leading-[1.05] tracking-tighter sm:text-5xl">
               Have a project in mind?
             </h2>
             <p className="mt-5 max-w-sm text-lg leading-relaxed text-night/80">
               Call or email me and tell me what you need built.
             </p>
-            <div className="mt-auto flex flex-col gap-3 pt-10 sm:flex-row md:flex-col lg:flex-row">
+            <div className="mt-auto flex flex-col gap-3 pt-10 sm:flex-row lg:flex-col">
               <a
                 href={profile.phoneHref}
                 className="flex items-center justify-center gap-2.5 rounded-full bg-night px-6 py-3.5 font-semibold text-lime transition duration-200 hover:-translate-y-0.5 hover:bg-snow hover:text-night"
@@ -120,7 +120,7 @@ export default function Contact() {
           </Reveal>
 
           {/* Details */}
-          <ul className="grid gap-4 sm:grid-cols-2 md:col-span-7">
+          <ul className="grid gap-4 sm:grid-cols-2 md:col-span-12 lg:col-span-7">
             {items.map((it, idx) => (
               <Reveal as="li" key={it.label} delay={idx * 80} className="card card-link flex items-center gap-4 !p-5">
                 <span className="grid h-11 w-11 shrink-0 place-items-center rounded-full bg-lime text-night">
@@ -138,7 +138,7 @@ export default function Contact() {
                 ) : (
                   <div className="min-w-0 flex-1">
                     <span className="block text-sm text-mute">{it.label}</span>
-                    <span className="block font-semibold">{it.value}</span>
+                    <span className="block break-words font-semibold">{it.value}</span>
                   </div>
                 )}
                 {it.copy && <CopyButton text={it.copy} label={it.label.toLowerCase()} />}

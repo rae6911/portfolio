@@ -3,12 +3,12 @@ import Reveal from "./Reveal";
 
 export default function Skills() {
   return (
-    <section id="skills" className="bg-surface py-20 md:py-28">
+    <section id="skills" className="bg-surface py-16 md:py-28">
       <div className="mx-auto max-w-6xl px-5">
         <Reveal as="h2" className="font-display text-4xl font-bold tracking-tight sm:text-5xl">
           Skills
         </Reveal>
-        <dl className="mt-12">
+        <dl className="mt-10 md:mt-12">
           {skills.map(([group, items]) => (
             <Reveal
               key={group}
